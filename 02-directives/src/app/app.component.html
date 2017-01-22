@@ -1,0 +1,35 @@
+<h1>Attribute Directives</h1>
+
+<h2>ngClass /ngStyle</h2>
+<div [ngStyle]="{'background-color': 'red'}"></div>
+
+<hr>
+
+<h2>Custom Attribute Directive</h2>
+
+<div [highlight]="'yellow'" [defaultColor]="'red'">Some Text</div>
+
+<h2>Structural Directives</h2>
+<h3>*ngIf</h3>
+
+<div *ngIf="_switch">Conditional Text</div>
+<button (click)="onSwitch()">Switch</button>
+<br><br><br><br>
+
+<hr>
+<h3>*ngFor</h3>
+<ul>
+  <li *ngFor="let item of _items; let i = index">{{ item }} - (Index: {{ i }})</li>
+</ul>
+
+<hr>
+<h3>ngSwitch</h3>
+
+<div [ngSwitch]="_value">
+  <p *ngSwitchCase="10">Ten</p>
+  <p *ngSwitchCase="100">One Hundred</p>
+  <p *ngSwitchDefault>Nothing son!</p>
+</div>
+
+<h2>Unless custom directive</h2>
+<div *unless="_switch">Conditional Text</div>
